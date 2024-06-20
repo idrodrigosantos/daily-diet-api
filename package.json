@@ -1,0 +1,36 @@
+{
+  "name": "daily-diet-api",
+  "version": "1.0.0",
+  "description": "REST API for daily diet control",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
+    "migrate:run": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js migrate:latest",
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
+    "test": "vitest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
+    "@types/node": "^20.12.12",
+    "@types/supertest": "^6.0.2",
+    "eslint": "^8.33.0",
+    "sqlite3": "^5.1.7",
+    "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.11.0",
+    "typescript": "^5.1.6",
+    "vitest": "^1.6.0"
+  }
+}
